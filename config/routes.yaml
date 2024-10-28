@@ -1,0 +1,141 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+
+#place route
+place_api_index:
+    path: /api/places
+    controller: 'App\Controller\PlaceController::index'
+    methods: ['GET']
+
+place_api_show:
+    path: /api/places/{id}
+    controller: 'App\Controller\PlaceController::show'
+    methods: ['GET']
+
+place_api_create:
+    path: /api/places
+    controller: 'App\Controller\PlaceController::create'
+    methods: ['POST']
+
+place_api_update:
+    path: /api/places/{id}
+    controller: 'App\Controller\PlaceController::update'
+    methods: ['PATCH']
+
+place_api_delete:
+    path: /api/places/{id}
+    controller: 'App\Controller\PlaceController::delete'
+    methods: ['DELETE']
+#place route
+
+
+#delivery route
+delivery_api_index:
+    path: /api/deliveries
+    controller: 'App\Controller\DeliveryController::index'
+    methods: ['GET']
+
+delivery_api_show:
+    path: /api/deliveries/{id}
+    controller: 'App\Controller\DeliveryController::show'
+    methods: ['GET']
+
+delivery_api_create:
+    path: /api/deliveries
+    controller: 'App\Controller\DeliveryController::create'
+    methods: ['POST']
+
+delivery_api_update:
+    path: /api/deliveries/{id}
+    controller: 'App\Controller\DeliveryController::update'
+    methods: ['PATCH']
+
+delivery_api_delete:
+    path: /api/deliveries/{id}
+    controller: 'App\Controller\DeliveryController::delete'
+    methods: ['DELETE']
+#delivery route
+
+
+
+
+#order route
+order_api_index:
+    path: /api/orders
+    controller: 'App\Controller\OrderController::index'
+    methods: ['GET']
+
+order_api_show:
+    path: /api/orders/{id}
+    controller: 'App\Controller\OrderController::show'
+    methods: ['GET']
+
+order_api_create:
+    path: /api/orders
+    controller: 'App\Controller\OrderController::create'
+    methods: ['POST']
+
+order_api_update:
+    path: /api/orders/{id}
+    controller: 'App\Controller\OrderController::update'
+    methods: ['PATCH']
+
+order_api_delete:
+    path: /api/orders/{id}
+    controller: 'App\Controller\OrderController::delete'
+    methods: ['DELETE']
+#order route
+
+
+#user route
+user_api_index:
+    path: /api/users
+    controller: 'App\Controller\UserController::index'
+    methods: ['GET']
+
+user_api_show:
+    path: /api/users/{id}
+    controller: 'App\Controller\UserController::show'
+    methods: ['GET']
+
+user_api_create:
+    path: /api/users
+    controller: 'App\Controller\UserController::create'
+    methods: ['POST']
+
+user_api_update:
+    path: /api/users/{id}
+    controller: 'App\Controller\UserController::update'
+    methods: ['PATCH']
+
+user_api_delete:
+    path: /api/users/{id}
+    controller: 'App\Controller\UserController::delete'
+    methods: ['DELETE']
+#user route
+
+# login and register user
+user_api_register:
+    path: /api/register
+    controller: 'App\Controller\RegistrationController::index'
+    methods: ['POST']
+
+api_login_check:
+    path: /api/login_check
+    methods: [ 'POST' ]
+
+app.swagger_ui_main:
+    path: /
+    methods: GET
+    defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
+
+app.swagger_ui:
+    path: /api/doc
+    methods: GET
+    defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
+
+
