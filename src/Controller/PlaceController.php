@@ -31,8 +31,7 @@ class PlaceController extends AbstractController
     public function index(EntityManagerInterface $entityManager): Response
     {
         $getId = $this->getUser()->getId();
-        $places = $entityManager->getRepository(Place::class)->findBy(
-            array("user" => $getId)
+        $places = $entityManager->getRepository(Place::class)->findAll(
         );
         $data = [];
         foreach ($places as $place) {
